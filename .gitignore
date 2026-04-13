@@ -1,0 +1,155 @@
+# =====================================================
+# .gitignore
+# =====================================================
+
+# =====================================================
+# SELF-HOSTED RUNNERS (CRITICAL)
+# =====================================================
+# Never commit runner binaries/configs/tokens
+actions-runner/
+actions-runner-*/
+_runner/
+actions-runner/**/run.sh
+actions-runner/**/config.sh
+actions-runner/**/svc.sh
+
+# =====================================================
+# SECRETS & ENV FILES
+# =====================================================
+.env
+.env.*
+*.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# =====================================================
+# PYTHON
+# =====================================================
+__pycache__/
+*.py[cod]
+*.so
+.Python
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Build / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Testing / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# =====================================================
+# JAVA / MAVEN
+# =====================================================
+target/
+*.jar
+*.war
+*.ear
+
+# Logs / crash dumps
+*.log
+hs_err_pid*
+replay_pid*
+
+# =====================================================
+# NODE (OPTIONAL EXTENSION)
+# =====================================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =====================================================
+# AWS / CLOUD
+# =====================================================
+# Keys (NEVER COMMIT)
+*.pem
+*.ppk
+
+# AWS config
+.aws/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+
+# =====================================================
+# DOCKER
+# =====================================================
+# Runtime files (do NOT ignore Dockerfile or .dockerignore)
+.dockerenv
+*.log
+
+# =====================================================
+# KUBERNETES
+# =====================================================
+# CRITICAL: kubeconfig contains cluster access
+kubeconfig
+kubeconfig.*
+*.kubeconfig
+.kube/
+
+# Helm
+charts/
+
+# =====================================================
+# IDE / EDITORS
+# =====================================================
+.vscode/
+.idea/
+*.iml
+
+# =====================================================
+# OS FILES
+# =====================================================
+.DS_Store
+Thumbs.db
+
+# =====================================================
+# LOGS & TEMP FILES
+# =====================================================
+*.log
+*.out
+*.err
+tmp/
+temp/
+
+# =====================================================
+# TEST / COVERAGE
+# =====================================================
+coverage/
+.nyc_output/
+
+# =====================================================
+# PROJECT OUTPUTS (SAFE TO IGNORE)
+# =====================================================
+lab-results/
+output/
+reports/
+
+# =====================================================
+# IMPORTANT NOTES
+# =====================================================
+# DO NOT IGNORE:
+# .github/workflows/  → Required for GitHub Actions
+
+# GitHub Secrets are managed in UI (NOT files)
+# Never commit:
+# - kubeconfig
+# - AWS keys
+# - runner tokens
+# - .env files
