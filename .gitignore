@@ -5,6 +5,7 @@
 # =====================================================
 # SELF-HOSTED RUNNERS (CRITICAL)
 # =====================================================
+
 # Never commit runner binaries/configs/tokens
 actions-runner/
 actions-runner-*/
@@ -16,6 +17,7 @@ actions-runner/**/svc.sh
 # =====================================================
 # SECRETS & ENV FILES
 # =====================================================
+
 .env
 .env.*
 *.env
@@ -27,6 +29,7 @@ actions-runner/**/svc.sh
 # =====================================================
 # PYTHON
 # =====================================================
+
 __pycache__/
 *.py[cod]
 *.so
@@ -53,19 +56,21 @@ htmlcov/
 # =====================================================
 # JAVA / MAVEN
 # =====================================================
+
 target/
 *.jar
 *.war
 *.ear
 
 # Logs / crash dumps
-*.log
-hs_err_pid*
+*.log*
+*hs_err_pid*
 replay_pid*
 
 # =====================================================
-# NODE (OPTIONAL EXTENSION)
+# NODE
 # =====================================================
+
 node_modules/
 npm-debug.log*
 yarn-debug.log*
@@ -74,6 +79,7 @@ yarn-error.log*
 # =====================================================
 # AWS / CLOUD
 # =====================================================
+
 # Keys (NEVER COMMIT)
 *.pem
 *.ppk
@@ -81,34 +87,36 @@ yarn-error.log*
 # AWS config
 .aws/
 
-# Terraform
+# =====================================================
+# TERRAFORM
+# =====================================================
+
 .terraform/
 *.tfstate
 *.tfstate.*
-.terraform.lock.hcl
 
 # =====================================================
 # DOCKER
 # =====================================================
-# Runtime files (do NOT ignore Dockerfile or .dockerignore)
+
+# Runtime files
 .dockerenv
 *.log
 
 # =====================================================
 # KUBERNETES
 # =====================================================
+
 # CRITICAL: kubeconfig contains cluster access
 kubeconfig
 kubeconfig.*
 *.kubeconfig
 .kube/
 
-# Helm
-charts/
-
 # =====================================================
 # IDE / EDITORS
 # =====================================================
+
 .vscode/
 .idea/
 *.iml
@@ -116,12 +124,14 @@ charts/
 # =====================================================
 # OS FILES
 # =====================================================
+
 .DS_Store
 Thumbs.db
 
 # =====================================================
 # LOGS & TEMP FILES
 # =====================================================
+
 *.log
 *.out
 *.err
@@ -131,12 +141,14 @@ temp/
 # =====================================================
 # TEST / COVERAGE
 # =====================================================
+
 coverage/
 .nyc_output/
 
 # =====================================================
-# PROJECT OUTPUTS (SAFE TO IGNORE)
+# PROJECT OUTPUTS
 # =====================================================
+
 lab-results/
 output/
 reports/
@@ -144,10 +156,12 @@ reports/
 # =====================================================
 # IMPORTANT NOTES
 # =====================================================
+
 # DO NOT IGNORE:
 # .github/workflows/  → Required for GitHub Actions
-
-# GitHub Secrets are managed in UI (NOT files)
+#
+# GitHub Secrets are managed in the UI (NOT files)
+#
 # Never commit:
 # - kubeconfig
 # - AWS keys
